@@ -1,0 +1,65 @@
+.toggle-wrapper {
+  position: relative;
+  font-size: 24px;
+  padding-right: 15px;
+}
+#toggle_input {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.toggle-switch::before {
+  content: '';
+  position: absolute;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  transform: translate3d(0, 0, 0);
+  top: 2px;
+  left: 2px;
+  border-radius: 2px;
+  width: 32px;
+  height: 32px;
+  transition: transform 0.3s cubic-bezier(0, 1, 0.5, 1);
+}
+.toggle-switch {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  user-select: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 36px;
+  width: 72px;
+  border-radius: 4px;
+  transition: background-color 0.3s cubic-bezier(0, 1, 0.5, 1);
+  background-color: #848484;
+}
+
+.toggle-switch i {
+  line-height: 21px;
+  z-index: 2;
+}
+
+.toggle-switch .moon {
+  color: #fff;
+}
+.toggle-switch .sun {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+#toggle_input:checked ~ .toggle-switch .moon {
+  color: rgba(0, 0, 0, 0.4);
+}
+#toggle_input:checked ~ .toggle-switch .sun {
+  color: #fff;
+}
+
+#toggle_input:checked ~ .toggle-switch {
+  background-color: rgba(112, 112, 112, 0.4);
+}
+#toggle_input:checked ~ .toggle-switch::before {
+  transform: translate3d(36px, 0, 0);
+}

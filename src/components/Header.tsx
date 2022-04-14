@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import 'styles/Header.css'
+import DarkModeToggle from 'components/DarkModeToggle'
 
 const Header = () => {
   return (
@@ -18,6 +19,7 @@ const Header = () => {
           <Link to="/water">wtr</Link>
         </li>
       </ul>
+      <DarkModeToggle />
     </div>
   )
 }
