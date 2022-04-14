@@ -1,6 +1,16 @@
 import 'styles/Card.css'
-import { FiThumbsUp, FiBookmark, FiMessageSquare } from 'react-icons/fi'
-const Card = () => {
+import {
+  FiThumbsUp,
+  FiBookmark,
+  FiMessageSquare,
+  FiZoomIn,
+} from 'react-icons/fi'
+
+interface Props {
+  imageSrc: string
+}
+
+const Card: React.FC<Props> = ({ imageSrc }) => {
   return (
     <div className="card">
       <div className="text-content">
@@ -12,7 +22,14 @@ const Card = () => {
         </p>
       </div>
       <div className="image-content">
-        <img src="unsplash-weekly.jpg" alt="unsplash weekly" />
+        <img src={imageSrc} alt="unsplash weekly" />
+        <div className="image-overlay">
+          <button className="image-zoom-in">
+            <i>
+              <FiZoomIn />
+            </i>
+          </button>
+        </div>
       </div>
       <div className="buttons">
         <button>

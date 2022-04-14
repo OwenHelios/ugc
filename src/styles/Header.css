@@ -5,6 +5,7 @@
   justify-content: space-between;
   border-bottom: 1px solid var(--border-primary);
   padding: 0 12px;
+  height: 50px;
   /* Stick header to the top when scrolling: */
   position: sticky;
   top: 0;

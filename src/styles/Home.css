@@ -1,13 +1,25 @@
 .main-content {
   padding: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
+  column-count: 4;
+  column-gap: 15px;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 430px) {
   .main-content {
-    flex-direction: column;
+    column-count: 1;
     padding: 10px;
+  }
+}
+
+@media screen and (min-width: 430.01px) and (max-width: 768px) {
+  .main-content {
+    column-count: 2;
+    padding: 12px;
+  }
+}
+
+@media screen and (min-width: 768.01px) and (max-width: 1200px) {
+  .main-content {
+    column-count: 3;
   }
 }

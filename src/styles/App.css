@@ -19,9 +19,10 @@ body {
   --text-invert: #fbfbfe;
   --background-primary: #fff;
   --background-secondary: #f9f9fb;
-  --background-tertiary: #ececee;
+  --background-tertiary: #c4c3c3;
   --border-primary: #cfcfd8;
   --border-secondary: #e0e0e6;
+  --sidebar-width: 266px;
 }
 
 #root {
@@ -45,7 +46,6 @@ body {
   --background-tertiary: #2b2a33;
   --border-primary: #52525e;
   --border-secondary: #3a3944;
-  --sidebar-width: 266px;
 }
 
 code {
@@ -75,9 +75,6 @@ main {
 }
 
 @media screen and (min-width: 992px) {
-  .header {
-    margin-left: var(--sidebar-width);
-  }
   main {
     margin-left: var(--sidebar-width);
   }

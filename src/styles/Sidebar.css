@@ -37,5 +37,6 @@
     transform: translateX(0);
     border: none;
     background-color: var(--background-primary);
+    top: 50px;
   }
 }
