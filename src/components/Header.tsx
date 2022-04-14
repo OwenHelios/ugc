@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import 'styles/Header.css'
 import DarkModeToggle from 'components/DarkModeToggle'
 import { FiMenu } from 'react-icons/fi'
+import { FiGithub } from 'react-icons/fi'
 const Header = () => {
   const openSidebar = () => {
     const sidebar = document.querySelector('.sidebar')
@@ -31,6 +32,13 @@ const Header = () => {
             <Link to="/water">wtr</Link>
           </li>
         </ul>
+        <div className="github">
+          <a href="https://github.com/OwenHelios/ugc">
+            <i>
+              <FiGithub />
+            </i>
+          </a>
+        </div>
         <DarkModeToggle />
       </div>
     </header>

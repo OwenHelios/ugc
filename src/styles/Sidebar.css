@@ -5,6 +5,7 @@
   left: 0;
   width: 266px;
   background-color: var(--background-secondary);
+  border-right: 1px solid var(--border-primary);
   overflow-y: auto;
   transform: translateX(-100%);
   transition: all 200ms ease-in-out;
@@ -34,5 +35,7 @@
 @media screen and (min-width: 960px) {
   .sidebar {
     transform: translateX(0);
+    border: none;
+    background-color: var(--background-primary);
   }
 }
