@@ -32,7 +32,7 @@
   visibility: visible;
 }
 
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 992px) {
   .sidebar {
     transform: translateX(0);
     border: none;

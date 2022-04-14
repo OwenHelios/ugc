@@ -1,10 +1,14 @@
+import Card from 'components/Card'
 import 'styles/Home.css'
 
 const Home = () => {
   return (
     <main>
       <div className="main-content">
-        <div className="card">ff</div>
+        <Card />
+        <Card />
+        <Card />
+        <Card />
       </div>
     </main>
   )

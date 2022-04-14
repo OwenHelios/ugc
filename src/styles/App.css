@@ -19,7 +19,7 @@ body {
   --text-invert: #fbfbfe;
   --background-primary: #fff;
   --background-secondary: #f9f9fb;
-  --background-tertiary: #fbfbfe;
+  --background-tertiary: #ececee;
   --border-primary: #cfcfd8;
   --border-secondary: #e0e0e6;
 }
@@ -62,11 +62,19 @@ li {
   list-style: none;
 }
 
+button {
+  cursor: pointer;
+  outline: none;
+  background-color: transparent;
+  border: none;
+  color: var(--text-secondary);
+}
+
 main {
   transition: all 200ms ease-in-out;
 }
 
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 992px) {
   .header {
     margin-left: var(--sidebar-width);
   }
