@@ -30,3 +30,9 @@
 .sidebar.open ~ .overlay {
   visibility: visible;
 }
+
+@media screen and (min-width: 960px) {
+  .sidebar {
+    transform: translateX(0);
+  }
+}

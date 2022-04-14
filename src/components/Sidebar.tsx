@@ -10,7 +10,7 @@ const Sidebar = () => {
     <>
       <aside ref={sidebarRef} className="sidebar">
         <h1>Sidebar</h1>
-        <div className="content">
+        <div className="sidebar-inner">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam totam
           odit iste facere numquam cupiditate itaque dolore accusamus neque
           perferendis alias sed ad labore omnis impedit nobis exercitationem,
