@@ -5,12 +5,16 @@ import {
   FiMessageSquare,
   FiZoomIn,
 } from 'react-icons/fi'
+import { useState } from 'react'
+import ImageModal from './ImageModal'
 
 interface Props {
   imageSrc: string
 }
 
 const Card: React.FC<Props> = ({ imageSrc }) => {
+  const [modalOpen, setModalOpen] = useState(false)
+  const closeModal = () => setModalOpen(false)
   return (
     <div className="card">
       <div className="text-content">
@@ -24,7 +28,7 @@ const Card: React.FC<Props> = ({ imageSrc }) => {
       <div className="image-content">
         <img src={imageSrc} alt="unsplash weekly" />
         <div className="image-overlay">
-          <button className="image-zoom-in">
+          <button className="image-zoom-in" onClick={() => setModalOpen(true)}>
             <i>
               <FiZoomIn />
             </i>
@@ -48,6 +52,13 @@ const Card: React.FC<Props> = ({ imageSrc }) => {
           </i>
         </button>
       </div>
+      {modalOpen && (
+        <ImageModal
+          imageSrc={imageSrc}
+          modalOpen={modalOpen}
+          closeModal={closeModal}
+        />
+      )}
     </div>
   )
 }
