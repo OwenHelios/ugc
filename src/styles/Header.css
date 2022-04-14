@@ -3,6 +3,23 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  /* Stick header to the top when scrolling: */
+  /* position: sticky;
+  top: 0; */
+}
+
+.hamburger-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 5px;
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+  outline: none;
+  background-color: transparent;
+  border: none;
+  color: var(--text-secondary);
 }
 
 .nav-links {

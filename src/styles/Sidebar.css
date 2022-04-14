@@ -1,0 +1,32 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 266px;
+  background-color: var(--background-secondary);
+  overflow-y: auto;
+  transform: translateX(-100%);
+  transition: all 200ms ease-in-out;
+  z-index: 20;
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.overlay {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: all 200ms ease-in-out;
+  z-index: 10;
+}
+
+.sidebar.open ~ .overlay {
+  visibility: visible;
+}

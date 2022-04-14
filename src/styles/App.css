@@ -11,6 +11,29 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+:root {
+  --text-primary: #15141a;
+  --text-secondary: #5b5b66;
+  --text-inactive: rgba(91, 91, 102, 0.6509803921568628);
+  --text-link: #1870f0;
+  --text-invert: #fbfbfe;
+  --background-primary: #fff;
+  --background-secondary: #f9f9fb;
+  --background-tertiary: #fbfbfe;
+  --border-primary: #cfcfd8;
+  --border-secondary: #e0e0e6;
+}
+
+#root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+  accent-color: var(--accent-primary);
+  overflow: auto;
+}
+
 .dark {
   --text-primary: #fbfbfe;
   --text-secondary: #cfcfd8;
@@ -22,22 +45,6 @@ body {
   --background-tertiary: #2b2a33;
   --border-primary: #52525e;
   --border-secondary: #3a3944;
-  --accent-primary: #468df3;
-  --accent-primary-engage: rgba(70, 141, 243, 0.1);
-  --text-primary-red: #f16b8c;
-  --text-primary-green: #6bb86a;
-  --text-primary-blue: #74a9f6;
-  --text-primary-yellow: #e88c66;
-}
-
-#root {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  background-color: var(--background-primary);
-  color: var(--text-primary);
-  accent-color: var(--accent-primary);
-  overflow: auto;
 }
 
 code {
