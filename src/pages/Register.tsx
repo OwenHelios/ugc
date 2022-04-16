@@ -1,5 +1,11 @@
+import { register, reset } from 'auth/authSlice'
+import Spinner from 'components/Spinner'
 import { useState, useEffect } from 'react'
 import { FaUser } from 'react-icons/fa'
+import { useNavigate } from 'react-router-dom'
+import { toast } from 'react-toastify'
+import { useAppDispatch, useAppSelector } from 'typedhooks'
+import 'styles/Login_Register.css'
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -11,13 +17,45 @@ const Register = () => {
 
   const { name, email, password, confirmPassword } = formData
 
+  const navigate = useNavigate()
+  const dispatch = useAppDispatch()
+
+  const { user, isError, success, isLoading, message } = useAppSelector(
+    state => state.auth
+  )
+
+  useEffect(() => {
+    if (isError) {
+      toast.error(message)
+    }
+
+    if (success || user) {
+      navigate('/')
+    }
+
+    dispatch(reset())
+  }, [user, isError, success, message, navigate, dispatch])
+
   const handleChange: React.ChangeEventHandler<HTMLInputElement> = e => {
     setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }))
   }
 
   const handleSubmit: React.FormEventHandler<HTMLFormElement> = e => {
     e.preventDefault()
+
+    if (password !== confirmPassword) {
+      toast.error('Passwords do not match')
+    } else {
+      const userData = {
+        name,
+        email,
+        password,
+      }
+      dispatch(register(userData))
+    }
   }
+
+  if (isLoading) return <Spinner />
   return (
     <>
       <section className="heading">

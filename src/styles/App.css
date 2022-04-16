@@ -43,7 +43,7 @@ body {
   --text-invert: #15141a;
   --background-primary: #15141a;
   --background-secondary: #23222b;
-  --background-tertiary: #2b2a33;
+  --background-tertiary: #504d64;
   --border-primary: #52525e;
   --border-secondary: #3a3944;
 }
@@ -67,7 +67,7 @@ button {
   outline: none;
   background-color: transparent;
   border: none;
-  color: var(--text-secondary);
+  color: var(--text-primary);
 }
 
 main {

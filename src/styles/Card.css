@@ -45,6 +45,7 @@
 }
 .card .buttons button {
   font-size: 20px;
+  color: var(--text-secondary);
 }
 
 .image-overlay {

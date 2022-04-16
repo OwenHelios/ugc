@@ -1,0 +1,27 @@
+section {
+  text-align: center;
+  background-color: var(--background-secondary);
+  padding: 10px 0;
+}
+
+.form-group {
+  padding: 6px 0;
+}
+
+.form-control {
+  width: 200px;
+  font-size: 16px;
+}
+
+.form-group button {
+  width: 200px;
+  height: 30px;
+  background-color: var(--background-tertiary);
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.form-group button:hover {
+  filter: invert(1);
+}
