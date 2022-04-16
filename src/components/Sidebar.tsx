@@ -1,6 +1,7 @@
 import { useRef } from 'react'
 import 'styles/Sidebar.css'
-import { FiUser, FiUserPlus } from 'react-icons/fi'
+import { FaSignInAlt, FaSignOutAlt, FaUser } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 const Sidebar = () => {
   const sidebarRef = useRef<HTMLElement>(null)
@@ -14,16 +15,16 @@ const Sidebar = () => {
         <div className="sidebar-inner">
           <ul className="sidebar-list">
             <li className="sidebar-list-item">
-              <a className="sidebar-list-link" href="#">
-                <FiUser />
+              <Link className="sidebar-list-link" to="/">
+                <FaSignInAlt />
                 <span className="sidebar-list-text">Login</span>
-              </a>
+              </Link>
             </li>
             <li className="sidebar-list-item">
-              <a className="sidebar-list-link" href="#">
-                <FiUserPlus />
-                <span className="sidebar-list-text">Sign Up</span>
-              </a>
+              <Link className="sidebar-list-link" to="#">
+                <FaUser />
+                <span className="sidebar-list-text">Register</span>
+              </Link>
             </li>
             <li className="sidebar-list-item"></li>
           </ul>
