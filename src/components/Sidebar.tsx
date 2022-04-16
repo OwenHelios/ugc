@@ -1,5 +1,6 @@
 import { useRef } from 'react'
 import 'styles/Sidebar.css'
+import { FiUser, FiUserPlus } from 'react-icons/fi'
 
 const Sidebar = () => {
   const sidebarRef = useRef<HTMLElement>(null)
@@ -11,13 +12,21 @@ const Sidebar = () => {
       <aside ref={sidebarRef} className="sidebar">
         <h1>Sidebar</h1>
         <div className="sidebar-inner">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam totam
-          odit iste facere numquam cupiditate itaque dolore accusamus neque
-          perferendis alias sed ad labore omnis impedit nobis exercitationem,
-          nihil sint dolorem voluptas eaque deleniti dolorum. Alias iure saepe
-          fugiat molestias eos, officia dicta labore laboriosam, ducimus
-          praesentium cupiditate, quisquam molestiae nobis reiciendis beatae
-          deserunt natus.
+          <ul className="sidebar-list">
+            <li className="sidebar-list-item">
+              <a className="sidebar-list-link" href="#">
+                <FiUser />
+                <span className="sidebar-list-text">Login</span>
+              </a>
+            </li>
+            <li className="sidebar-list-item">
+              <a className="sidebar-list-link" href="#">
+                <FiUserPlus />
+                <span className="sidebar-list-text">Sign Up</span>
+              </a>
+            </li>
+            <li className="sidebar-list-item"></li>
+          </ul>
         </div>
       </aside>
       <div className="overlay" onClick={closeSidebar}></div>

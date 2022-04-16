@@ -1,19 +1,21 @@
-import React from 'react'
+import LineTo from 'react-lineto'
 import 'styles/Test.css'
 
 const Test = () => {
   return (
     <div>
-      <div className="can-toggle">
-        <input id="a" type="checkbox" />
-        <label htmlFor="a">
-          <div
-            className="can-toggle__switch"
-            data-checked="On"
-            data-unchecked="Off"
-          ></div>
-          <div className="can-toggle__label-text">.can-toggle</div>
-        </label>
+      <div className="demo">
+        <div className="A">Element A</div>
+        <div className="B">Element B</div>
+        <LineTo
+          borderColor="red"
+          borderStyle="solid"
+          borderWidth={2}
+          fromAnchor="top right"
+          toAnchor="top left"
+          from="A"
+          to="B"
+        />
       </div>
     </div>
   )
