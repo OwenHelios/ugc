@@ -9,6 +9,7 @@ const PostForm = () => {
 
   const handleSubmit: React.FormEventHandler<HTMLFormElement> = e => {
     e.preventDefault()
+
     dispatch(createPost({ title }))
     setTitle('')
   }

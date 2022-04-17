@@ -4,21 +4,35 @@ import {
   FiBookmark,
   FiMessageSquare,
   FiZoomIn,
+  FiDelete,
 } from 'react-icons/fi'
 import { useState } from 'react'
 import ImageModal from './ImageModal'
+import { useAppDispatch } from 'typedhooks'
+import { deletePost } from 'posts/postSlice'
 
 interface Props {
   imageSrc?: string
+  title: string
+  createdAt?: string
+  postId?: string
 }
 
-const Card: React.FC<Props> = ({ imageSrc }) => {
+const Card: React.FC<Props> = ({ imageSrc, title, createdAt, postId }) => {
   const [modalOpen, setModalOpen] = useState(false)
   const closeModal = () => setModalOpen(false)
+
+  const dispatch = useAppDispatch()
   return (
     <div className="card">
       <div className="text-content">
-        <h3 className="title">Unsplash Weekly</h3>
+        <h3 className="title">
+          {createdAt
+            ? title +
+              ' POSTED AT ' +
+              new Date(createdAt).toLocaleString('en-US')
+            : title}
+        </h3>
         {!imageSrc && (
           <p className="description">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga vero
@@ -58,6 +72,13 @@ const Card: React.FC<Props> = ({ imageSrc }) => {
             <FiBookmark />
           </i>
         </button>
+        {postId && (
+          <button onClick={() => dispatch(deletePost(postId))}>
+            <i>
+              <FiDelete />
+            </i>
+          </button>
+        )}
       </div>
       {imageSrc && modalOpen && (
         <ImageModal

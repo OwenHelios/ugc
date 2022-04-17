@@ -1,6 +1,6 @@
 import { useRef } from 'react'
 import 'styles/Sidebar.css'
-import { FaSignInAlt, FaSignOutAlt, FaUser } from 'react-icons/fa'
+import { FaSignInAlt, FaSignOutAlt, FaUser, FaDashcube } from 'react-icons/fa'
 import { Link, useNavigate } from 'react-router-dom'
 import { logout, reset } from 'auth/authSlice'
 import { useAppDispatch, useAppSelector } from 'typedhooks'
@@ -27,12 +27,20 @@ const Sidebar = () => {
         <div className="sidebar-inner">
           <ul className="sidebar-list">
             {user ? (
-              <li className="sidebar-list-item">
-                <button onClick={handleLogOut}>
-                  <FaSignOutAlt />
-                  <span className="sidebar-list-text">Log out</span>
-                </button>
-              </li>
+              <>
+                <li className="sidebar-list-item">
+                  <button onClick={handleLogOut} className="sidebar-list-link">
+                    <FaSignOutAlt />
+                    <span className="sidebar-list-text">Log out</span>
+                  </button>
+                </li>
+                <li className="sidebar-list-item">
+                  <Link className="sidebar-list-link" to="/dashboard">
+                    <FaDashcube />
+                    <span className="sidebar-list-text">Dashboard</span>
+                  </Link>
+                </li>
+              </>
             ) : (
               <>
                 <li className="sidebar-list-item">

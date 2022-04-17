@@ -84,7 +84,7 @@ export const authSlice = createSlice({
       .addCase(register.rejected, (state, action) => {
         state.isLoading = false
         state.isError = true
-        state.message = action.error.toString()
+        state.message = action.error.message || 'error registering user'
         state.user = null
       })
       .addCase(login.pending, state => {
@@ -98,7 +98,7 @@ export const authSlice = createSlice({
       .addCase(login.rejected, (state, action) => {
         state.isLoading = false
         state.isError = true
-        state.message = action.error.toString()
+        state.message = action.error.message || 'error logging in user'
         state.user = null
       })
       .addCase(logout.fulfilled, state => {
