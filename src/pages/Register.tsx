@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import { useAppDispatch, useAppSelector } from 'typedhooks'
 import 'styles/Login_Register.css'
+import Post from './Post'
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -114,6 +115,9 @@ const Register = () => {
             <button type="submit">Submit</button>
           </div>
         </form>
+      </section>
+      <section style={{ height: '300px' }}>
+        <Post />
       </section>
     </>
   )
