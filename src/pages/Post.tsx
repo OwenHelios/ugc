@@ -37,7 +37,7 @@ const Post = () => {
           ],
           toolbar:
             'undo redo | blocks | ' +
-            'bold italic forecolor | alignleft aligncenter ' +
+            'bold italic underline forecolor | alignleft aligncenter ' +
             'alignright alignjustify | bullist numlist outdent indent | ' +
             'removeformat | help',
           content_style:

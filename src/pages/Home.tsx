@@ -1,6 +1,7 @@
 import Card from 'components/Card'
 import Carousel from 'components/Carousel'
 import 'styles/Home.css'
+import Post from './Post'
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
           ]}
         />
       </div>
+      <Post />
       {/* <Card imageSrc="unsplash-weekly.jpg" title="firebase" />
       <Card imageSrc="https://picsum.photos/200/300" title="firebase" />
       <Card imageSrc="https://picsum.photos/300/200" title="firebase" />

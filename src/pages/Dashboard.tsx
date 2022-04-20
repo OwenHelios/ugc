@@ -5,7 +5,6 @@ import { getPosts, reset } from 'posts/postSlice'
 import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useAppDispatch, useAppSelector } from 'typedhooks'
-import Post from './Post'
 
 const Dashboard = () => {
   const navigate = useNavigate()
